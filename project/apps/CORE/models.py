@@ -6,6 +6,7 @@ class Estudiante(models.Model):
        edad = models.IntegerField()
        # Otros campos de tu modelo Estudiante
 
+
 class Profesor(models.Model):
        nombre = models.CharField(max_length=100)
        especialidad = models.CharField(max_length=100)
