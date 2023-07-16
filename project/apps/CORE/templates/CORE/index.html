@@ -1,5 +1,14 @@
-{% extends 'CORE/base.html' %}
+{% extends 'Home/base.html' %}
 
+{% block TITULO %}
+    ESTUDIANTES
+{% endblock TITULO %}
 {% block CONTENIDO %}
-    <p>{{saludo}}</p>
-{% endblock CONTENIDO %}<p>{{saludo}}</p>
+    {% for estudiante in  estudiantes %}
+        <p>{{estudiante.nombre}}</p>
+        <p>{{estudiante.edad}}</p>
+    {% endfor %}
+
+    <a href="{% url 'Home:home' %}"> IR AL MENU</a>
+    
+{% endblock CONTENIDO %}
